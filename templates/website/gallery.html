@@ -1,34 +1,31 @@
 {% extends 'website/layout.html' %} {% load static %}
 <!-- keywords -->
 {% block keywords %}
-<meta name="keywords" content="ecell, e-summit, esummit, e summmit, entrepreneurship, E-Cell,nitrr, Gallery"> {% endblock keywords %}
+    <meta name="keywords"
+          content="ecell, e-summit, esummit, e summmit, entrepreneurship, E-Cell,nitrr, Gallery"> {% endblock keywords %}
 <!-- title -->
 {% block title %}
-<title>Gallery | E-Cell NIT Raipur</title>
+    <title>Gallery | E-Cell NIT Raipur</title>
 {% endblock title %}
 <!-- css -->
 {% block css %}
-<link rel="stylesheet" href='{% static "website/common/header.css" %}'>
+    <link rel="stylesheet" href='{% static "website/common/header.css" %}'>
 
-<link rel="stylesheet" href="{% static 'website/gallery/gallery.css' %}"> {% endblock css %}
+    <link rel="stylesheet" href="{% static 'website/gallery/gallery.css' %}"> {% endblock css %}
 <!-- js -->
 {% block js %}
-<script src="{% static 'website/gallery/gallery.js' %}"></script>
 {% endblock js %}
 <!-- content -->
 {% block content %}
-<h2 class="text-center font-weight-bold">Gallery</h2>
-<hr>
-<div id="gallery" class="container">
-</div>
-<div id="big_container">
-    <div>
-        <img src="/static/website/gallery/img/1.jpg" alt="" id="big_img">
-        <button id="bcloseBtn"><i class="fa fa-times"></i></button>
-        <div id="toggles">
-            <button id="left"><i class="fa fa-arrow-circle-o-left"></i></button>
-            <button id="right"><i class="fa fa-arrow-circle-o-right"></i></button>
-        </div>
+    <h2 class="text-center font-weight-bold">Gallery</h2>
+    <hr>
+    {% include 'website/spinner.html' %}
+
+    <div id="gallery">
+
     </div>
-</div>
+
+
+    <script src="{% static 'website/gallery/gallery.js' %}"></script>
+
 {% endblock content %}

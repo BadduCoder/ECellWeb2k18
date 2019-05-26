@@ -1,171 +1,201 @@
 {% extends 'website/layout.html' %} {% load static %}
 <!-- keywords -->
 {% block keywords %}
-<meta name="keywords" content="ecell, NIT Raipur, raipur, NIT, e-summit, esummit, e summmit, entrepreneurship, E-Cell, nitrr">
+    <meta name="keywords"
+          content="ecell, NIT Raipur, raipur, NIT, e-summit, esummit, e summmit, entrepreneurship, E-Cell, nitrr">
 {% endblock keywords %}
 <!-- title -->
 {% block title %}
-<title>Home | E-Cell NIT Raipur</title>
+    <title>Home | E-Cell NIT Raipur</title>
 {% endblock title %}
 <!-- common css -->
 {% block css %}
-<link rel="stylesheet" href="{% static 'website/common/animate.css' %}">
-<!-- page specific css -->
-<link rel="stylesheet" href="{% static 'website/index/index.css' %}">
-<link rel="stylesheet" href="{% static 'website/index/header.css' %}">
-<link rel="stylesheet" href="{% static 'website/index/intro.css' %}">
-<link rel="stylesheet" href="{% static 'website/index/about.css' %}">
-<link rel="stylesheet" href="{% static 'website/index/vision.css' %}">
-<link rel="stylesheet" href="{% static 'website/index/contact.css' %}"> {% endblock css %}
+    <link rel="stylesheet" href="{% static 'website/common/animate.css' %}">
+    <!-- page specific css -->
+    <link rel="stylesheet" href="{% static 'website/index/index.css' %}">
+    <link rel="stylesheet" href="{% static 'website/index/header.css' %}">
+    <link rel="stylesheet" href="{% static 'website/index/intro.css' %}">
+    <link rel="stylesheet" href="{% static 'website/index/about.css' %}">
+    <link rel="stylesheet" href="{% static 'website/index/vision.css' %}">
+    <link rel="stylesheet" href="{% static 'website/index/contact.css' %}"> {% endblock css %}
 
-<!-- loader_css -->
-{% block loader_css %}
-<link rel="stylesheet" href="{% static 'website/index/loader.css' %}">
-<script src="{% static 'website/common/anime.min.js' %}"></script>
-<!-- <script src="{% static 'website/index/vivus.min.js' %}"></script> -->
-
-{% endblock loader_css %}
-
-<!-- loader_html and script -->
-{% block loader_html_js %} {% include "website/loader.html" %}
-<script src="{% static 'website/index/loader.js' %}"></script>
-{% endblock loader_html_js %}
-
+{#<!-- loader_css -->#}
+{#{% block loader_css %}#}
+{#<link rel="stylesheet" href="{% static 'website/index/loader.css' %}">#}
+{#<script src="{% static 'website/common/anime.min.js' %}"></script>#}
+{#<!-- <script src="{% static 'website/index/vivus.min.js' %}"></script> -->#}
+{##}
+{#{% endblock loader_css %}#}
+{##}
+{#<!-- loader_html and script -->#}
+{#{% block loader_html_js %} {% include "website/loader.html" %}#}
+{#<script src="{% static 'website/index/loader.js' %}"></script>#}
+{#{% endblock loader_html_js %}#}
 
 
 <!-- js -->
 {% block js %}
-<script src="{% static 'website/index/index.js' %}"></script>
+    <script src="{% static 'website/index/index.js' %}"></script>
 {% endblock js %}
 
 <!-- header -->
 {% block header %}
-<header>
-    <div class=cover>
-        <h1 class="fadeInUp mb-1">E-SUMMIT 18</h1>
-        <p class="p-1 zoomIn" data-wow-delay=.3s>
-            <span class=bold>"</span> Don't fit in, just standout
-            <span class=bold>"</span>
-        </p>
-        <img src='{% static "website/img/enterpreneurs.svg" %}' alt="">
-    </div>
-    <div class=diagonal></div>
-</header>
-<!-- logged in username -->
-<button id="loggedin_user">Login/Signup</button>
+    <header>
+        <div class=cover>
+            <div class="d-none d-md-block">
+                <h1 class="fadeInUp mb-1 wow fadeInUp">ENTREPRENEURSHIP CELL </h1>
+                <h2 class="p-1 wow fadeInUp" data-wow-delay=0.5s>
+                    NIT RAIPUR
+                </h2>
+            </div>
+            <h1 class="d-sm-none">E-CELL<span class="d-none d-sm-inline-block">,</span> <br class="d-sm-none"> NIT
+                RAIPUR</h1>
+            <img src='{% static "website/img/enterpreneurs.svg" %}' alt="">
+        </div>
+        <div class=diagonal></div>
+    </header>
+    <!-- logged in username -->
+    <button id="loggedin_user">Login/Signup</button>
 {% endblock header %}
 
 <!-- content -->
 {% block content %}
-<section id=introduction>
-    <h2 class="wow fadeInUp" data-wow-delay=.3s>E-CELL</h2>
-    <hr>
-    <ul>
-        <li>
-            <img class="wow fadeInUp" data-wow-delay=.2s src='{% static "website/img/winds.svg" %}' alt="">
-            <p class="wow fadeInDown" data-wow-delay=.2s>Innovation</p>
-        </li>
-        <li>
-            <img class="wow fadeInUp" data-wow-delay=.4s src='{% static "website/img/leaf.svg" %}' alt="">
-            <p class="wow fadeInDown" data-wow-delay=.4s>Leadership</p>
-        </li>
-        <li>
-            <img class="wow fadeInUp" data-wow-delay=..5s src='{% static "website/img/pinetree.svg" %}' alt="">
-            <p class="wow fadeInDown" data-wow-delay=..5s>Growth</p>
-        </li>
-        <li>
-            <img class="wow fadeInUp" data-wow-delay=.6s src='{% static "website/img/mountain.svg" %}' alt="">
-            <p class="wow fadeInDown" data-wow-delay=.6s>Development</p>
-        </li>
-    </ul>
-</section>
-<section id=about class=container-fluid>
-    <div class="row justify-content-start">
-        <div class=col-md-3>
-            <h2 class="wow fadeInLeft" data-wow-delay=.3s data-wow-delay=.3s>
-                <span>About</span>
-                <span>Us</span>
-            </h2>
+    <section id=introduction>
+        <h2 class="wow fadeInUp" data-wow-delay=.3s>E-CELL</h2>
+        <hr>
+        <ul>
+            <li>
+                <img class="wow fadeInUp" data-wow-delay=.2s src='{% static "website/img/winds.svg" %}' alt="">
+                <p class="wow fadeInDown" data-wow-delay=.2s>Innovation</p>
+            </li>
+            <li>
+                <img class="wow fadeInUp" data-wow-delay=.4s src='{% static "website/img/leaf.svg" %}' alt="">
+                <p class="wow fadeInDown" data-wow-delay=.4s>Leadership</p>
+            </li>
+            <li>
+                <img class="wow fadeInUp" data-wow-delay=..5s src='{% static "website/img/pinetree.svg" %}' alt="">
+                <p class="wow fadeInDown" data-wow-delay=..5s>Growth</p>
+            </li>
+            <li>
+                <img class="wow fadeInUp" data-wow-delay=.6s src='{% static "website/img/mountain.svg" %}' alt="">
+                <p class="wow fadeInDown" data-wow-delay=.6s>Development</p>
+            </li>
+        </ul>
+    </section>
+    <section id="es18" class="container-fluid">
+        <h2 class="wow fadeInUp" data-wow-delay=.3s data-wow-delay=.3s>
+            E-Summit'18
+        </h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-4 text-center text-md-right">
+                <img src="{% static 'website/img/es18logo.png' %}" alt="">
+            </div>
+            <div class="col-md-7">
+                <p class="wow fadeIn" data-wow-delay="0.2s">
+                    E-Summit’ 18 provided a platform that showcased riveting Speaker sessions,
+Mind boggling Quizzing rounds, Business Model competition and some virtual play with the stocks and money out there. E-Summit being one of the prime events of E-Cell involves interactive sessions by eminent people of this field and ES18 saw a wide variety of speakers who are the top players in their respective fields. The most prominent speakers were Gopichand Katragadda, Daniel Ramamoorthy, Nandini Vaidyanathan, Kumar Gaurav.
+                </p>
+                <p  class="wow fadeIn" data-wow-delay="0.5s">
+                    E-Summit witnessed an exhilarating response from the spectators which included students, professors, and other enthusiasts. Apart from the regular events, this time we had a special session by the famous stand-up comedian Nishant Tanwar. In all, the summit was a massive success.
+                </p>
+            </div>
         </div>
-        <div class=col-md-8>
-            <p class="wow fadeInUp" data-wow-delay=.3s>The Entrepreneurship cell, NIT Raipur is a non-profit
-                organization that manifests the essence of entrepreneurship
-                in the passionate youngsters who have the zeal to pursue entrepreneurship and advocate this vehement
-                enthusiasm
-                in the generations to come. Keeping this ideology in mind we not only provide the foundation to the
-                entrepreneurial
-                capabilities of the promising young minds but also help in nurturing their skills by providing
-                resources
-                such as new ideas , funding mentoring, other mentorship programs, workshops to help them organize their
-                strategy
-                and frequent, highly interactive speaker sessions and lecture series. At E-Summit we aspire to create a
-                mélange
-                of eminent speakers who have proved themselves in diverse fields and are at the zenith of glory.
-                E-Summit’18
-                will not just be a conclave of innovative minds and epistemic elocutionists, but it will be the place
-                where
-                ideas not only thrive but become the greatest revelations of the century.</p>
+    </section>
+    <section id=about class=container-fluid>
+        <div class="row justify-content-start">
+            <div class=col-md-3>
+                <h2 class="wow fadeInLeft" data-wow-delay=.3s data-wow-delay=.3s>
+                    <span>About</span>
+                    <span>Us</span>
+                </h2>
+            </div>
+            <div class=col-md-8>
+                <p class="wow fadeInUp" data-wow-delay=.3s>The Entrepreneurship cell, NIT Raipur is a non-profit
+                    organization that manifests the essence of entrepreneurship
+                    in the passionate youngsters who have the zeal to pursue entrepreneurship and advocate this vehement
+                    enthusiasm
+                    in the generations to come. Keeping this ideology in mind we not only provide the foundation to the
+                    entrepreneurial
+                    capabilities of the promising young minds but also help in nurturing their skills by providing
+                    resources
+                    such as new ideas , funding mentoring, other mentorship programs, workshops to help them organize
+                    their
+                    strategy
+                    and frequent, highly interactive speaker sessions and lecture series. At E-Summit we aspire to
+                    create a
+                    mélange
+                    of eminent speakers who have proved themselves in diverse fields and are at the zenith of glory.
+                    E-Summit’18
+                    will not just be a conclave of innovative minds and epistemic elocutionists, but it will be the
+                    place
+                    where
+                    ideas not only thrive but become the greatest revelations of the century.</p>
+            </div>
         </div>
+    </section>
+    <div class=right-grey>
+        <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 10" preserveAspectRatio=none>
+            <polygon points="100 0 100 10 0 10"/>
+        </svg>
     </div>
-</section>
-<div class=right-grey>
-    <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 10" preserveAspectRatio=none>
-        <polygon points="100 0 100 10 0 10" /> </svg>
-</div>
-<section id=vision class=mx-auto>
-    <h2 class="wow fadeInUp" data-wow-delay=.3s>Vision</h2>
-    <hr>
-    <p class="wow fadeInDown" data-wow-delay=.1s> The Entrepreneurship Cell, NIT Raipur is a platform for the aspiring
-        young minds who wish to pursue entrepreneurship
-        and reach the pinnacle of glory. The cell aims at manifesting the essence of entrepreneurship in the
-        convoluting
-        gray matters of the young force coming up. This delegation gives wings to ideas and support in the form of
-        investors
-        and seed funding along with mentorship guidance to the pioneering and budding entrepreneurs. The cell aims at
-        promoting
-        the startup culture and building up entrepreneurs who have it in them to become the greatest pioneers of this
-        century.
-    </p>
-</section>
-<!-- contact section -->
-<div id=contact_box class='my-md-5 py-md-5'>
-    <div class="row justify-content-center">
-        <div class="col-md-6 mb-3 mb-md-0">
-            {% include 'website/map.html' %}
+    <section id=vision class=mx-auto>
+        <h2 class="wow fadeInUp" data-wow-delay=.3s>Vision</h2>
+        <hr>
+        <p class="wow fadeInDown" data-wow-delay=.1s> The Entrepreneurship Cell, NIT Raipur is a platform for the
+            aspiring
+            young minds who wish to pursue entrepreneurship
+            and reach the pinnacle of glory. The cell aims at manifesting the essence of entrepreneurship in the
+            convoluting
+            gray matters of the young force coming up. This delegation gives wings to ideas and support in the form of
+            investors
+            and seed funding along with mentorship guidance to the pioneering and budding entrepreneurs. The cell aims
+            at
+            promoting
+            the startup culture and building up entrepreneurs who have it in them to become the greatest pioneers of
+            this
+            century.
+        </p>
+    </section>
+    <!-- contact section -->
+    <div id=contact_box class='my-md-5 py-md-5'>
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+                {% include 'website/map.html' %}
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <section id=contact class="mt-0">
+                    <h2 class="wow fadeInUp">Contact</h2>
+                    <hr class="mb-3">
+                    <p class="text-center mt-1">Leave a message</p>
+                    <form class="text-center">
+                        <input type="text" id='username' placeholder="Name" name="name" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                        <textarea name="msg" placeholder="Message..." rows="4" required></textarea>
+                        <button id="submit_btn" class="mt-5">Submit</button>
+                        {% csrf_token %}
+                    </form>
+                </section>
+            </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-center">
-            <section id=contact class="mt-0">
-                <h2 class="wow fadeInUp">Contact</h2>
-                <hr class="mb-3">
-                <p class="text-center mt-1">Leave a message</p>
-                <form class="text-center">
-                    <input type="text" id='username' placeholder="Name" name="name" required>
-                    <input type="email" placeholder="Email" name="email" required>
-                    <textarea name="msg" placeholder="Message..." rows="4" required></textarea>
-                    <button id="submit_btn" class="mt-5">Submit</button>
-                    {% csrf_token %}
-                </form>
-            </section>
-        </div>
+        <!-- row end -->
+        <!-- <div class="text-center mt-5">
+            <h3 class="wow fadeInUp">ecell@nitrr.ac.in</h3>
+            <div id=social-media>
+                <a class="" href=https://www.facebook.com/ecellnitrr/>
+                <i class="wow fadeInRight fa fa-3x fa-facebook"></i>
+                </a>
+                <a href=https://www.instagram.com/ecell.nitraipur/>
+                <i class="wow fadeInRight fa fa-3x fa-instagram"></i>
+                </a>
+                <a class="" href="https://twitter.com/ecell_nitrr">
+                    <i class="wow fadeInLeft fa fa-3x fa-twitter"></i>
+                </a>
+                <a href=https://www.linkedin.com/company/entrepreneurship-cell-nit-raipur/>
+                <i class="wow fadeInLeft fa fa-3x fa-linkedin"></i>
+                </a>
+            </div>
+        </div> -->
     </div>
-    <!-- row end -->
-    <!-- <div class="text-center mt-5">
-        <h3 class="wow fadeInUp">ecell@nitrr.ac.in</h3>
-        <div id=social-media>
-            <a class="" href=https://www.facebook.com/ecellnitrr/>
-            <i class="wow fadeInRight fa fa-3x fa-facebook"></i>
-            </a>
-            <a href=https://www.instagram.com/ecell.nitraipur/>
-            <i class="wow fadeInRight fa fa-3x fa-instagram"></i>
-            </a>
-            <a class="" href="https://twitter.com/ecell_nitrr">
-                <i class="wow fadeInLeft fa fa-3x fa-twitter"></i>
-            </a>
-            <a href=https://www.linkedin.com/company/entrepreneurship-cell-nit-raipur/>
-            <i class="wow fadeInLeft fa fa-3x fa-linkedin"></i>
-            </a>
-        </div>
-    </div> -->
-</div>
 
 {% endblock content %}

@@ -108,7 +108,7 @@ AUTHENTICATION_BACKENDS = (
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-if os.getenv('ENV') == 'production':
+if config('ENV') == 'production':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -199,3 +199,7 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'fields': 'id,name,email'}
 
 SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
+
+# MEDIA_ROOT = 'static/website/img/gallery_imgs'
+
+# MEDIA_URL = '/media/'

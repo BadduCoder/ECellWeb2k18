@@ -22,6 +22,7 @@ dist/
 downloads/
 eggs/
 .eggs/
+static/gallery_imgs/
 lib64/
 parts/
 sdist/

@@ -5,7 +5,7 @@
 <head>
     <!-- meta -->
     <meta http-equiv="cache-control" content="no-cache">
-    <meta name="google-site-verification" content="SquUfAOSd8-qZJoUnb8Q_thRolQJ3xJzVei7ls4XKFI" />
+    <meta name="google-site-verification" content="SquUfAOSd8-qZJoUnb8Q_thRolQJ3xJzVei7ls4XKFI"/>
     <meta charset=UTF-8>
     <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="subject" content="ECell NIT Raipur">
@@ -34,77 +34,88 @@
     {% block css %} css goes here {% endblock css %}
     <!-- common css -->
     <link rel="stylesheet" href="{% static 'website/common/common.css' %}">
-    <link rel="stylesheet" href="{% static 'website/common/footer.css' %}"> 
+    <link rel="stylesheet" href="{% static 'website/common/footer.css' %}">
 </head>
 
 <body>
-    <!-- loader html -->
-    {% block loader_html_js %} {% endblock loader_html_js %}
+<!-- loader html -->
+{% block loader_html_js %} {% endblock loader_html_js %}
 
-    <!-- menubar -->
-    {% include 'website/menubar.html' %}
+<!-- menubar -->
+{% include 'website/menubar.html' %}
 
-    
-    <!-- header -->
-    <img src="{% static 'website/img/logo.png' %}" alt="" id="logo-img"> {% block header %}
+
+<!-- header -->
+<img src="{% static 'website/img/logo.png' %}" alt="" id="logo-img"> {% block header %}
+    <style>
+        h1.header-heading {
+            font-size: 2em !important;
+            letter-spacing: 2px !important;
+        }
+    </style>
     <header>
-        <h1>E-SUMMIT 18</h1>
-        <p class="p-1 m-0">
-            <span class=bold>"</span> Don't fit in, just stand out
-            <span class=bold>"</span>
-        </p>
+        <h1 class="header-heading">E-CELL<span class="d-none d-sm-inline-block">,</span> <br class="d-sm-none"> NIT
+            RAIPUR</h1>
+        {#        <h2>#}
+        {#            NIT RAIPUR#}
+        {#        </h2>#}
         <!-- logged in username -->
         <button id="loggedin_user">Login/Signup</button>
         <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 10" preserveAspectRatio=none>
-            <polygon points="100 0 100 10 0 10" /> </svg>
+            <polygon points="100 0 100 10 0 10"/>
+        </svg>
     </header>
-    {% endblock header %}
+{% endblock header %}
 
-    <!-- content -->
-    {% block content %}
+<!-- content -->
+{% block content %}
     <h1>from the layout.html</h1>
-    {% endblock content %}
-    
-    <!-- modal -->
-    <link rel="stylesheet" href="{% static 'website/modal/modal.css' %}">
-    {% include 'website/modal.html' %}
-    <script src="{% static 'website/modal/misc.js' %}"></script>    
-    <script src="{% static 'website/modal/signup.js' %}"></script>    
-    <script src="{% static 'website/modal/login.js' %}"></script>    
+{% endblock content %}
 
-    <!-- footer -->
-    {% include 'website/footer.html' %}
+<!-- modal -->
+<link rel="stylesheet" href="{% static 'website/modal/modal.css' %}">
+{% include 'website/modal.html' %}
+<script src="{% static 'website/modal/misc.js' %}"></script>
+<script src="{% static 'website/modal/signup.js' %}"></script>
+<script src="{% static 'website/modal/login.js' %}"></script>
 
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- footer -->
+{% include 'website/footer.html' %}
 
-
-    <!-- menubar js-->
-    <script src="{% static 'website/menubar/menubar.js' %}"></script>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-    <!-- wow js -->
-    <script src="{% static 'website/common/wow.js' %}"></script>
-    <script>
-        var wow = new WOW({
-            offset: 100, // distance to the element when triggering the animation (default is 0)
-            mobile: false, // trigger animations on mobile devices (default is true)
-        });
-        wow.init();
-    </script>
+<!-- menubar js-->
+<script src="{% static 'website/menubar/menubar.js' %}"></script>
 
-    <!-- custom js -->
-    {% block js %}{% endblock js %}
 
-    <!-- map js -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104074998-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<!-- wow js -->
+<script src="{% static 'website/common/wow.js' %}"></script>
+<script>
+    var wow = new WOW({
+        offset: 100, // distance to the element when triggering the animation (default is 0)
+        mobile: false, // trigger animations on mobile devices (default is true)
+    });
+    wow.init();
+</script>
 
-        gtag('config', 'UA-104074998-1');
-    </script>
+<!-- custom js -->
+{% block js %}{% endblock js %}
+
+<!-- map js -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104074998-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-104074998-1');
+</script>
 </body>
 
 </html>
