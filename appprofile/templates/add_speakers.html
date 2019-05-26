@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+
+<form action="{% url 'speaker:add_speakers' %}" method="post">
+			{% csrf_token %}
+		
+			<input type="text" name="name" placeholder="Name">
+			</div>
+			<div>
+			<input type="text"  name="email" placeholder="email" >
+            </div>
+            <div>
+            <input type="number"  name="contact_no" placeholder="Contact No" >
+            </div>
+            <div>
+            <input type="text"  name="company" placeholder="Company name" >
+            </div>
+            <div>
+            <input type="text"  name="designation" placeholder="designation" >
+            </div>
+            <div>
+            <input type="text"  name="remarks" placeholder="remarks" >
+            </div>
+            
+			<div>
+			<input type="submit" name="" value="submit">
+
+
+			
+</form>
+
+<a href="{% url 'social:begin' 'facebook' %}">Login with facebook</a>
+</body>
+</html>

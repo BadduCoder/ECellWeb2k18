@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from . import views
 from django.contrib.auth import views as auth_views
 urlpatterns = [
-    path('',views.homepage),
+    path('',views.homepage,name='index'),
     # url(r'^pass/', include('django.contrib.auth.urls')),
     path('event/<int:event_id>', views.event_detail, name='Event_Detail'),
     path('event/<str:event_id>', views.event_detail, name='Event_Detail'),

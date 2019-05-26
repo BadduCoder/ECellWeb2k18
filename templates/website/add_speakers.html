@@ -1,0 +1,58 @@
+{% extends 'website/layout.html' %} {% load static %}
+<!-- keywords -->
+{% block keywords %}
+<meta name="keywords" content="ecell, e-summit, esummit, e summmit, entrepreneurship, E-Cell,nitrr, speakers"> {% endblock keywords %}
+<!-- title -->
+{% block title %}
+<title>Speakers | E-Cell NIT Raipur</title>
+{% endblock title %}
+<!-- css -->
+{% block css %}
+<link rel="stylesheet" href='{% static "website/common/header.css" %}'>
+
+<link rel="stylesheet" href="{% static 'website/speakers/new_speaker.css' %}"> {% endblock css %}
+
+    {% block content %}
+    <div class="container">
+    <form id="join-us">
+        <div class="fields">
+			{% csrf_token %}
+            <span>
+			<input type="text" id="name" placeholder="Name">
+            </span>
+            <br />
+			<span>
+			<input type="text"  id="email" placeholder="email" >
+            </span>
+            <br />
+            <span>
+            <input type="number"  id="contact_no" placeholder="Contact No" >
+            </span>
+            <br />
+            <span>
+            <input type="text"  id="company" placeholder="Company name" >
+            </span>
+            <br />
+            <span>
+            <input type="text"  id="designation" placeholder="designation" >
+            </span>
+            <br />
+            <span>
+            <input type="text"  id="remarks" placeholder="remarks" >
+            </span>
+        </div>
+        <div class="submit">
+                <input class="submit" value="Submit" type="button" id="submit"/>
+              </div>
+        
+
+
+			
+    </form>
+    </div>
+    {% block js %}
+    <script src="{% static 'website/modal/add_speaker.js' %}"></script>
+    {% endblock js %}
+
+    {% endblock %}
+

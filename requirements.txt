@@ -1,5 +1,7 @@
+astroid==1.6.6
 certifi==2018.4.16
 chardet==3.0.4
+defusedxml==0.6.0
 dj-database-url==0.5.0
 Django==2.0.5
 django-admin-view-permission==1.6
@@ -10,6 +12,9 @@ django-flat-theme==1.1.4
 djangorestframework==3.8.2
 djangorestframework-jwt==1.11.0
 gunicorn==19.9.0
+idna==2.6
+isort==4.3.20
+lazy-object-proxy==1.4.1
 mccabe==0.6.1
 oauthlib==2.1.0
 Pillow==5.1.0
@@ -28,3 +33,4 @@ social-auth-core==1.7.0
 urllib3==1.22
 whitenoise==3.3.1
 wrapt==1.10.11
+XlsxWriter==1.1.8
